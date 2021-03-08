@@ -1,78 +1,124 @@
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 import Container from "../ui/containers/Container";
 import { FaixaWrapperSimples } from "../ui/faixas/FaixaStyles";
-import { Faixa1Texto, FaixaConteudoResponsive, Title } from "./Faixa1";
-import { slider } from "../../helpers/dados";
+import ButtonPulse from "../ui/buttons/ButtonPulse";
 
-import { CarouselProvider, Dot, Slider, Slide } from "pure-react-carousel";
-import "pure-react-carousel/dist/react-carousel.es.css";
+import { Title, TitleVerde } from "./Faixa1"
+import { ButtonWrapper } from "./Faixa2";
 
-const Faixa6WrapperSimples = styled(FaixaWrapperSimples)`
-  padding-top: 0;
+const ContentContainer = styled(Container)`
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
 `;
 
-const DepoimentosContainer = styled(CarouselProvider)`
-  width: 100%;
+const FaixaConteudo = styled.div`
+  display: flex;
+  padding: 0 2rem 0 5rem;
 `;
 
-const SlideItem = styled(Slide)`
-  div {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-  }
+const ContentTitles = styled.div`
+  max-width: 45rem;
+  padding-right: 3rem;
 `;
-
-const Dots = styled.div`
-  align-items: center;
+const ContentInfos = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: row;
+`;
+const ContentInfo = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 180px;
+  margin: 0 1.5rem;
+  text-align: center;
 `;
 
-const DotItem = styled(Dot)`
-  background-color: #333333;
-  border-radius: 50%;
-  height: 15px;
-  margin: 0 5px;
-  width: 15px;
+const TitleFaixa6 = styled(Title)`
+  color: ${props => props.theme.client.colors.azul};
+  line-height: 3rem;
+`;
+const TitleStrongFaixa6 = styled(TitleVerde)`
+  color: ${props => props.theme.client.colors.azul};
 `;
 
-const Faixa6 = () => (
-  <Faixa6WrapperSimples>
-    <Container>
-      <FaixaConteudoResponsive>
-        <Faixa1Texto>
-          <Title>PLC MÁQUINAS VULCANIZADORAS É 5 ESTRELAS NO GOOGLE!</Title>
-          <DepoimentosContainer
-            totalSlides={4}
-            visibleSlides={1}
-            naturalSlideHeight={220}
-            naturalSlideWidth={830}
+const TextSimple = styled.p`
+  font-size: 18px;
+  font-weight: 300;
+  margin: 2rem 0;
+`;
+
+const TitleInfos = styled.p`
+  font-size: 17px;
+  font-weight: 800;
+  color: #23c1cb;
+`;
+const TextInfos = styled(TextSimple)`
+  font-size: 17px;
+  margin: 0;
+`;
+
+const RowBlue = styled.div`
+  background-color: #4994d4;
+  width: 1px;
+  height: 100px;
+`;
+
+const Faixa6 = ({callForm}) => (
+  <FaixaWrapperSimples>
+    <ContentContainer>
+      <FaixaConteudo>
+        <ContentTitles>
+          <TitleFaixa6>Faturamento dos nossos franqueados
+            <TitleStrongFaixa6>{" "}cresceu mais de 500%!</TitleStrongFaixa6>
+          </TitleFaixa6>
+          <TextSimple>100% dos franqueados responderam que tiveram o retorno no prazo esperado. Isso porque o mercado de estética e emagrecimento cresceu 567% no Brasil nos últimos cinco anos.</TextSimple>
+        </ContentTitles>
+        <ContentInfos>
+          <ContentInfo>
+            <TitleInfos>2 bilhões de pessoas</TitleInfos>
+            <TextInfos>
+              Com obesidade e sobrepeso
+            </TextInfos>
+          </ContentInfo>
+          <RowBlue />
+          <ContentInfo>
+            <TitleInfos>30% do salário</TitleInfos>
+            <TextInfos>
+              Brasileiras gastam com estética
+            </TextInfos>
+          </ContentInfo>
+          <RowBlue />
+          <ContentInfo>
+            <TitleInfos>50% de aumento</TitleInfos>
+            <TextInfos>
+              De procedimentos estéticos já em 2021
+            </TextInfos>
+          </ContentInfo>
+        </ContentInfos>
+      </FaixaConteudo>
+        <ButtonWrapper>
+          <ButtonPulse
+            backColor="azul"
+            fontColor="branco"
+            backPulse="azul"
+            onClick={() => callForm()}
           >
-            <Slider>
-              {slider.map(item => {
-                return (
-                  <SlideItem index={item.id} key={item.id}>
-                    <img
-                      src={item.image}
-                      alt="Logo cliente"
-                    />
-                  </SlideItem>
-                );
-              })}
-            </Slider>
-            <Dots>
-              <DotItem slide={0} />
-              <DotItem slide={1} />
-              <DotItem slide={2} />
-              <DotItem slide={3} />
-            </Dots>
-          </DepoimentosContainer>
-        </Faixa1Texto>
-      </FaixaConteudoResponsive>
-    </Container>
-  </Faixa6WrapperSimples>
+            FATURE ALTO NA EMAGRECENTRO!
+          </ButtonPulse>
+        </ButtonWrapper>
+    </ContentContainer>
+  </FaixaWrapperSimples>
 );
+
+Faixa6.propTypes = {
+  callForm: PropTypes.func.isRequired
+};
 
 export default Faixa6;

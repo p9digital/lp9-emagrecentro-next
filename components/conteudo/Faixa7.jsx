@@ -1,35 +1,47 @@
 import styled from "styled-components";
-import PropTypes from "prop-types";
 
 import Container from "../ui/containers/Container";
-import { FaixaWrapper } from "../ui/faixas/FaixaStyles";
-import {
-  Faixa1Texto,
-  FaixaConteudoResponsive,
-} from "./Faixa1";
+import { FaixaWrapperSimples } from "../ui/faixas/FaixaStyles";
+import Icon from "../ui/icons/Icon";
 
-import FormularioFixo from "../formulario/FormularioFixo";
+import { Title, TitleVerde } from "./Faixa1";
 
-
-const Faixa7Wrapper = styled(FaixaWrapper)`
-  background-image: url('/static/img/faixa7/background3.png');
-  padding: 5rem 1rem;
+const ContentContainer = styled(Container)`
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
 `;
 
-const Faixa7 = ({ callForm }) => (
-  <Faixa7Wrapper>
-    <Container>
-      <FaixaConteudoResponsive>
-        <Faixa1Texto>
-          <FormularioFixo/>
-        </Faixa1Texto>
-      </FaixaConteudoResponsive>
-    </Container>
-  </Faixa7Wrapper>
-);
+const TitleFaixa7 = styled(Title)`
+  color: ${props => props.theme.client.colors.azul};
+  line-height: 3rem;
+`;
+const TitleStrongFaixa7 = styled(TitleVerde)`
+  color: ${props => props.theme.client.colors.azul};
+  padding-bottom: 0;
+`;
 
-Faixa7.propTypes = {
-  callForm: PropTypes.func.isRequired
-};
+const FontText = styled.p`
+  font-size: 15px;
+  font-weight: 300;
+  margin: 0;
+`;
+
+
+const Faixa7 = () => (
+  <FaixaWrapperSimples>
+    <ContentContainer>
+      <TitleFaixa7>
+        Retorno comprovado!
+         <Icon tamanho="2rem" tipo="svg" cor="" icon="correct" />
+      </TitleFaixa7>
+      <TitleStrongFaixa7>
+        100% dos franqueados recuperaram o investimento no prazo esperado*!
+      </TitleStrongFaixa7>
+      <FontText>*Fonte: Pesquisa ABF</FontText>
+    </ContentContainer>
+  </FaixaWrapperSimples>
+);
 
 export default Faixa7;

@@ -80,7 +80,7 @@ const Sucesso = () => {
   useEffect(() => {
     async function buscaSession() {
       const session = await JSON.parse(
-        await localStorage.getItem("@plcmaquinas/session-lead")
+        await localStorage.getItem("@emagrecentro/session-lead")
       );
 
       if (session) {
@@ -98,7 +98,7 @@ const Sucesso = () => {
         return false;
       }
 
-      localStorage.removeItem("@plcmaquinas/session-lead");
+      localStorage.removeItem("@emagrecentro/session-lead");
     }
 
     buscaSession();

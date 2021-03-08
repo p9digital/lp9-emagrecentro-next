@@ -10,11 +10,11 @@ import FormularioHomeTopo from "../components/formulario/FormularioHomeTopo";
 
 import Faixa1 from "../components/conteudo/Faixa1";
 import Faixa2 from "../components/conteudo/Faixa2";
-// import Faixa3 from "../components/conteudo/Faixa3";
-// import Faixa4 from "../components/conteudo/Faixa4";
-// import Faixa5 from "../components/conteudo/Faixa5";
-// import Faixa6 from "../components/conteudo/Faixa6";
-// import Faixa7 from "../components/conteudo/Faixa7";
+import Faixa3 from "../components/conteudo/Faixa3";
+import Faixa4 from "../components/conteudo/Faixa4";
+import Faixa5 from "../components/conteudo/Faixa5";
+import Faixa6 from "../components/conteudo/Faixa6";
+import Faixa7 from "../components/conteudo/Faixa7";
 // import Faixa8 from "../components/conteudo/Faixa8";
 import Footer from "../components/layout/Footer";
 
@@ -43,29 +43,29 @@ const FormWrapperHorizontal = styled.div`
   z-index: 25;
   margin-top: -45rem;
 `;
-const FormWrapper = styled.div`
-  position: relative;
-  z-index: 25;
+// const FormWrapper = styled.div`
+//   position: relative;
+//   z-index: 25;
 
-  @media (max-width: 1200px) {
-    right: 3rem;
-  }
+//   @media (max-width: 1200px) {
+//     right: 3rem;
+//   }
 
-  @media (max-width: 1045px) {
-    right: 1rem;
-  }
+//   @media (max-width: 1045px) {
+//     right: 1rem;
+//   }
 
-  @media (max-width: 900px) {
-    position: inherit;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-direction: column;
+//   @media (max-width: 900px) {
+//     position: inherit;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     align-content: center;
+//     flex-direction: column;
 
-    margin-bottom: 5rem;
-  }
-`;
+//     margin-bottom: 5rem;
+//   }
+// `;
 
 const ContentPersonagemForm = styled.div``;
 const PersonagemForm = styled.img`
@@ -167,8 +167,8 @@ const Home = () => {
         <meta property="og:url" content="https://lp9plcmaquinas.netlify.app/" />
       </Head>
       <PaginaInterna>
-        <Faixa1 callForm={callForm} />
-        <Element name="formHorizontal">
+        <Faixa1 />
+        <Element name="form">
           <FormWrapperHorizontal>
             <ContentPersonagemForm>
               <picture>
@@ -183,18 +183,15 @@ const Home = () => {
           </FormWrapperHorizontal>
         </Element>
         <Faixa2 callForm={callForm} />
-        {/* <Element name="form">
-          <FormWrapper FormAltura={FormFixo}>
-            <FormularioHome />
-          </FormWrapper>
-        </Element> */}
-        {/* <Faixa3 callForm={callForm} />
+        <Faixa3/>
         <Faixa4 callForm={callForm} />
-        <Faixa5 callForm={callForm} />
+        <Element name="formFaixa5">
+          <Faixa5 />
+        </Element>
         <Faixa6 callForm={callForm}/>
-        <Faixa7 callForm={callForm} />
-        <Faixa8 callForm={callForm} />
-        <Footer callForm={callForm} /> */}
+        <Faixa7 />
+        {/* <Faixa8 callForm={callForm} /> */}
+        {/* <Footer callForm={callForm} /> */}
       </PaginaInterna>
     </div>
   );

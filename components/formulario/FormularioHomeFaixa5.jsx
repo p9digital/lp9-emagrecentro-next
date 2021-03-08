@@ -22,7 +22,7 @@ import {
   FormSeguranca
 } from "../ui/formulario/FormStylesHorizontal";
 
-import { capitais, estados} from "../../helpers/dados";
+import { capitais, estados } from "../../helpers/dados";
 
 import {
   validacao,
@@ -36,7 +36,18 @@ export const FormContainer = styled.div`
   justify-content: center;
 `;
 
-export default function FormularioHomeTopo() {
+const ContentPersonagem = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 420px;
+  width: 450px;
+`;
+const Personagem = styled.img`
+  height: 450px;
+`;
+
+export default function FormularioHomeFaixa5() {
   const router = useRouter();
 
   const [lead, setLead] = useState({
@@ -185,16 +196,16 @@ export default function FormularioHomeTopo() {
             </FormHeaderHorizontal>
             <FormInputsMenor>
               <FormRowHorizontal>
-              <Input
-                nome="nome"
-                placeholder="Nome Completo"
-                handleInput={handleInput}
-                valor={lead.nome}
-                valido={controleForm.valido}
-                className="select-input--cinza"
-                tipo="text"
-                custom={lead.nome ? validaNomeCompleto(lead.nome) : true}
-                />
+                <Input
+                  nome="nome"
+                  placeholder="Nome Completo"
+                  handleInput={handleInput}
+                  valor={lead.nome}
+                  valido={controleForm.valido}
+                  className="select-input--cinza"
+                  tipo="text"
+                  custom={lead.nome ? validaNomeCompleto(lead.nome) : true}
+                  />
               </FormRowHorizontal>
               <FormRowHorizontal2Campos>
                 <Input
@@ -238,32 +249,41 @@ export default function FormularioHomeTopo() {
                   className="select-input--cinza select-input--medium"
                 />
               </FormRowHorizontalCidade>
-            <Select
-              nome="capital"
-              placeholder="Capital disponível para investimento?"
-              handleInput={handleInput}
-              valor={lead.capital}
-              valores={capitais}
-              valido={controleForm.valido}
-              className="select-input--cinza"
-            />
+              <Select
+                nome="capital"
+                placeholder="Capital disponível para investimento?"
+                handleInput={handleInput}
+                valor={lead.capital}
+                valores={capitais}
+                valido={controleForm.valido}
+                className="select-input--cinza"
+              />
             </FormInputsMenor>
-            </FormConteudo>
+            <FormButton
+              type="submit"
+              backColor="azul"
+              fontColor="branco"
+            >
+            BAIXAR APRESENTAÇÃO!
+            </FormButton>
+            <FormSeguranca>
+              <i className="fas fa-lock icon" />
+              <span className="textSeguranca">
+                Seus dados estão protegidos conosco.
+              </span>
+            </FormSeguranca>
+          </FormConteudo>
           <FormFooter>
-              <FormButton
-                type="submit"
-                backColor="azul"
-                fontColor="branco"
-              >
-              BAIXAR APRESENTAÇÃO!
-              </FormButton>
-              <FormSeguranca>
-                <i className="fas fa-lock icon" />
-                <span className="textSeguranca">
-                  Seus dados estão protegidos conosco.
-                </span>
-              </FormSeguranca>
-            </FormFooter>
+            <ContentPersonagem>
+              <picture>
+                <source
+                  type="image/webp"
+                  srcSet="/static/img/faixa5/personagem.webp"
+                />
+                <Personagem src="/static/img/faixa5/personagem.png" alt="Emagrecentro" />
+              </picture>
+            </ContentPersonagem>
+          </FormFooter>
         </FormTopo>
       )}
     </>

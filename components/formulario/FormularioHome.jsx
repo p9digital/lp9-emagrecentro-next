@@ -132,7 +132,7 @@ export default function FormularioHome() {
         lead_expire: hoje
       };
 
-      localStorage.setItem("@plcmaquinas/session-lead", JSON.stringify(dados));
+      localStorage.setItem("@emagrecentro/session-lead", JSON.stringify(dados));
 
       router.push("/sucesso");
     } catch (err) {
