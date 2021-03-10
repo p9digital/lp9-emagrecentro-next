@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Head from "next/head";
 
 import { FaixaWrapper } from "../components/ui/faixas/FaixaStyles";
@@ -20,6 +20,7 @@ import { ButtonWrapper } from "../components/conteudo/Faixa2";
 
 import { FaixaConteudo, FaixaSucessoTexto, LogoSucesso } from "./sucesso";
 
+import Link from "../components/ui/buttons/Link";
 import Icon from "../components/ui/icons/Icon";
 import ButtonPulse from "../components/ui/buttons/ButtonPulse";
 
@@ -60,11 +61,64 @@ const ButtonWrapperFinalizado = styled(ButtonWrapper)`
   justify-content: flex-start;
 `;
 
-// const ButtonPulseDownload = styled(ButtonPulseFaixa1)`
-//   &::after {
-//     background-color: ${props => props.theme.client.colors.verde};
-//   }
-// `;
+const pulse = keyframes`
+  0% {
+    transform: initial;
+    opacity: 1;
+  }
+  80% {
+    transform: initial;
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1.2) scaleY(1.3);
+    opacity: 0;
+  }
+`;
+
+const LinkDownload = styled(Link)`
+  border-radius: 10px;
+  position: relative;
+  z-index: 0;
+  padding: 1.6rem 3rem;
+  border: none;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  transition: all 0.2s ease 0s;
+
+  font-family: Arial;
+  font-weight: bold;
+  @media (max-width: 500px) {
+    font-size: 1.4rem;
+  }
+
+  &::after {
+    background-color: ${props =>
+      props.backPulse
+        ? props.theme.client.colors[props.backPulse]
+        : props.theme.colors.verde};
+    animation: ${pulse} 3.6s ease-in-out infinite;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    border-radius: 10px;
+    @media (max-width: 600px) {
+      animation: initial;
+    }
+  }
+  &:hover {
+    transition-delay: 0.05;
+    transform: scale(1.1);
+    &::after {
+      visibility: hidden;
+    }
+  }
+`;
 
 const CardWrapper = styled.div`
   display: flex;
@@ -186,15 +240,15 @@ const Finalizado = () => {
     <div>
       <Head>
         <title>
-          Fature até R$ 15 mil POR MÊS com a franquia home office Total Clean!
+          Franquia Emagrecentro | Fature, em média, R$ 1 milhão por ano!
         </title>
         <meta
           name="description"
-          content="Total Clean é a microfranquia home office TOP OF MIND no setor de limpeza e impermeabilização de sofás, estofados e tapetes. Baixe nossa apresentação."
+          content="Seja franqueado(a) Emagrecentro, 1ª franquia de estética e emagrecimento do Brasil! Payback de 6 a 12 meses. Lucratividade de 20%.  Baixe a apresentação."
         />
         <meta
           name="keywords"
-          content="microfranquia, microfranquia home office, microfranquia online barata, franquia impermeabilização, franquia limpeza de estofados, total clean franquia, higienização de sofá, franquia sofá, franquia limpeza estofados"
+          content="emagrecentro, emagrecentro franquia valor, emagrecentro faturamento, franquia emagrecentro lucro, emagrecentro franqueado, franquia emagrecimento, franquia estetica, franquia de clínicas de emagrecimento, franquia de estetica ABF, franquia emagrecimento retorno"
         />
         <meta name="robots" content="index, follow" />
         <meta name="rating" content="general" />
@@ -202,20 +256,17 @@ const Finalizado = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://franquiaimpermeabilizacao.com.br/static/img/og.jpg"
+          content="http://franquiaemagrecimento.com.br/static/img/og.jpg"
         />
         <meta
           property="og:title"
-          content="Fature até R$ 15 mil POR MÊS com a franquia home office Total Clean!"
+          content="Franquia Emagrecentro | Fature, em média, R$ 1 milhão por ano!"
         />
         <meta
           property="og:description"
-          content="Total Clean é a microfranquia home office TOP OF MIND no setor de limpeza e impermeabilização de sofás, estofados e tapetes. Baixe nossa apresentação."
+          content="Seja franqueado(a) Emagrecentro, 1ª franquia de estética e emagrecimento do Brasil! Payback de 6 a 12 meses. Lucratividade de 20%.  Baixe a apresentação."
         />
-        <meta
-          property="og:url"
-          content="https://franquiaimpermeabilizacao.com.br/"
-        />
+        <meta property="og:url" content="http://franquiaemagrecimento.com.br/" />
       </Head>
       <Faixa1Wrapper>
         <ContentContainerFinalizado>
@@ -269,13 +320,21 @@ const Finalizado = () => {
                 pelo WhatsApp agora mesmo
               </Title>
               <ButtonWrapperFinalizado>
-                <ButtonPulse
+                <LinkDownload
                   backColor="azul"
                   fontColor="branco"
                   backPulse="azul"
+                  href={
+                    "https://wa.me/551155852700/?text=" +
+                    encodeURI(
+                      "[Emagrecentro] Quero mais informações para ser um franqueado Emagrecentro"
+                    )
+                  }
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  ENVIAR MENSAGEM PARA O WHATSAPP +55 11 99254-8341
-                </ButtonPulse>
+                  ENVIAR MENSAGEM PARA O WHATSAPP +55 11 5585 2700
+                </LinkDownload>
               </ButtonWrapperFinalizado>
             </Faixa1Texto>
           </FaixaConteudoResponsive>

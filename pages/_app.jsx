@@ -7,11 +7,11 @@ import theme from "../styles/theme";
 import GlobalStyle from "../styles/global";
 
 export default class CustomApp extends App {
-  // componentDidMount() {
-  //   TagManager.initialize({
-  //     gtmId: "GTM-KBPZ9M5"
-  //   });
-  // }
+  componentDidMount() {
+    TagManager.initialize({
+      gtmId: "GTM-MTJ5S72"
+    });
+  }
 
   render() {
     const { Component, pageProps } = this.props;
