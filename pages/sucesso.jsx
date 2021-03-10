@@ -16,7 +16,7 @@ import {
 
 import { FaixaWrapper } from "../components/ui/faixas/FaixaStyles";
 
-const FaixaWrapperSucesso = styled(FaixaWrapper)`
+export const FaixaWrapperSucesso = styled(FaixaWrapper)`
   background-color: ${props => props.theme.client.colors.azul};
 `;
 
@@ -43,7 +43,7 @@ export const FaixaSucessoTexto = styled(Faixa1Texto)`
   }
 `;
 
-const LogoSucesso = styled(Logo)`
+export const LogoSucesso = styled(Logo)`
   width: 200px;
 `;
 
