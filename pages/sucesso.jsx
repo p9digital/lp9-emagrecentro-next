@@ -119,36 +119,39 @@ const Personagem = styled.img`
 
 const Sucesso = () => (
   <div>
-      <Head>
-        <title>
-          Franquia Emagrecentro | Fature, em média, R$ 1 milhão por ano!
-        </title>
-        <meta
-          name="description"
-          content="Seja franqueado(a) Emagrecentro, 1ª franquia de estética e emagrecimento do Brasil! Payback de 6 a 12 meses. Lucratividade de 20%.  Baixe a apresentação."
-        />
-        <meta
-          name="keywords"
-          content="emagrecentro, emagrecentro franquia valor, emagrecentro faturamento, franquia emagrecentro lucro, emagrecentro franqueado, franquia emagrecimento, franquia estetica, franquia de clínicas de emagrecimento, franquia de estetica ABF, franquia emagrecimento retorno"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta name="rating" content="general" />
+    <Head>
+      <title>
+        Franquia Emagrecentro | Fature, em média, R$ 1 milhão por ano!
+      </title>
+      <meta
+        name="description"
+        content="Seja franqueado(a) Emagrecentro, 1ª franquia de estética e emagrecimento do Brasil! Payback de 6 a 12 meses. Lucratividade de 20%.  Baixe a apresentação. "
+      />
+      <meta
+        name="keywords"
+        content="emagrecentro, emagrecentro franquia valor, emagrecentro faturamento, franquia emagrecentro lucro, emagrecentro franqueado, franquia emagrecimento, franquia estetica, franquia de clínicas de emagrecimento, franquia de estetica ABF, franquia emagrecimento retorno"
+      />
+      <meta name="robots" content="index, follow" />
+      <meta name="rating" content="general" />
 
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="http://franquiaemagrecimento.com.br/static/img/og.jpg"
-        />
-        <meta
-          property="og:title"
-          content="Franquia Emagrecentro | Fature, em média, R$ 1 milhão por ano!"
-        />
-        <meta
-          property="og:description"
-          content="Seja franqueado(a) Emagrecentro, 1ª franquia de estética e emagrecimento do Brasil! Payback de 6 a 12 meses. Lucratividade de 20%.  Baixe a apresentação."
-        />
-        <meta property="og:url" content="http://franquiaemagrecimento.com.br/" />
-      </Head>
+      <meta property="og:type" content="website" />
+      <meta
+        property="og:image"
+        content="https://franquiaemagrecimento.com.br/static/img/og.png"
+      />
+      <meta
+        property="og:title"
+        content="Franquia Emagrecentro | Fature, em média, R$ 1 milhão por ano!"
+      />
+      <meta
+        property="og:description"
+        content="Seja franqueado(a) Emagrecentro, 1ª franquia de estética e emagrecimento do Brasil! Payback de 6 a 12 meses. Lucratividade de 20%.  Baixe a apresentação. "
+      />
+      <meta
+        property="og:url"
+        content="https://franquiaemagrecimento.com.br/"
+      />
+    </Head>
     <FaixaWrapperSucesso>
       <Container>
         <FaixaConteudo>

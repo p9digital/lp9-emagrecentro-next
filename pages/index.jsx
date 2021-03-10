@@ -133,7 +133,7 @@ const Home = () => {
         </title>
         <meta
           name="description"
-          content="Seja franqueado(a) Emagrecentro, 1ª franquia de estética e emagrecimento do Brasil! Payback de 6 a 12 meses. Lucratividade de 20%.  Baixe a apresentação."
+          content="Seja franqueado(a) Emagrecentro, 1ª franquia de estética e emagrecimento do Brasil! Payback de 6 a 12 meses. Lucratividade de 20%.  Baixe a apresentação. "
         />
         <meta
           name="keywords"
@@ -145,7 +145,7 @@ const Home = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="http://franquiaemagrecimento.com.br/static/img/og.jpg"
+          content="https://franquiaemagrecimento.com.br/static/img/og.png"
         />
         <meta
           property="og:title"
@@ -153,9 +153,9 @@ const Home = () => {
         />
         <meta
           property="og:description"
-          content="Seja franqueado(a) Emagrecentro, 1ª franquia de estética e emagrecimento do Brasil! Payback de 6 a 12 meses. Lucratividade de 20%.  Baixe a apresentação."
+          content="Seja franqueado(a) Emagrecentro, 1ª franquia de estética e emagrecimento do Brasil! Payback de 6 a 12 meses. Lucratividade de 20%.  Baixe a apresentação. "
         />
-        <meta property="og:url" content="http://franquiaemagrecimento.com.br/" />
+        <meta property="og:url" content="https://franquiaemagrecimento.com.br/" />
       </Head>
       <PaginaInterna>
         <Faixa1 />
