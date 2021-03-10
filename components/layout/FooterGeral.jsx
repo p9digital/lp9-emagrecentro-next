@@ -9,9 +9,6 @@ import { FaixaWrapperSimples } from "../ui/faixas/FaixaStyles";
 const FooterWrapperSimples = styled(FaixaWrapperSimples)`
   background-color: #f4f4f4;
   padding: 10rem 1rem 1rem;
-  @media (max-width: 900px) {
-    padding: 0 1rem;
-  }
 `;
 
 const FooterP9 = styled.div`

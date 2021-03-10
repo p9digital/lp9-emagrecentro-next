@@ -26,6 +26,21 @@ export const FaixaConteudo = styled(FaixaConteudoResponsive)`
 
 export const FaixaSucessoTexto = styled(Faixa1Texto)`
   max-width: 100rem;
+
+  @media (max-width: 1110px) {
+    max-width: 80rem;
+  }
+  @media (max-width: 900px) {
+    align-items: center;
+    max-width: 100%;
+    font-size: 18px;
+  }
+  @media (max-width: 600px) {
+    font-size: 17px;
+  }
+  @media (max-width: 400px) {
+    font-size: 16px;
+  }
 `;
 
 const LogoSucesso = styled(Logo)`
@@ -64,6 +79,42 @@ export const ContentIcon = styled.div`
   width: 3rem;
   height: 3rem;
   margin-left: 1.5rem;
+`;
+
+const FormWrapper = styled.div`
+  position: relative;
+`;
+
+const ContentPersonagem = styled.div`
+  position: absolute;
+  bottom: -29px;
+  right: -550px;
+  z-index: 100;
+
+  @media (max-width: 1110px) {
+    right: -460px;
+  }
+  @media (max-width: 992px) {
+    right: -440px;
+  }
+
+  @media (max-width: 900px) {
+    display: none;
+  }
+`;
+const Personagem = styled.img`
+  height: 600px;
+  width: 600px;
+
+  @media (max-width: 1110px) {
+    height: 500px;
+    width: 500px;
+  }
+
+  @media (max-width: 992px) {
+    height: 480px;
+    width: 480px;
+  }
 `;
 
 const Sucesso = () => (
@@ -111,15 +162,32 @@ const Sucesso = () => (
                   type="image/webp"
                   srcSet="/static/img/logo_branco.webp"
                 />
-                <LogoSucesso src="/static/img/logo_branco.png" alt="Emagrecentro" />
+                <LogoSucesso
+                  src="/static/img/logo_branco.png"
+                  alt="Emagrecentro"
+                />
               </picture>
             </LogoContent>
             <TitleSucesso>Você está quase lá...</TitleSucesso>
             <TitleSimple>
-              Antes de baixar a apresentação da <br/>
+              Antes de baixar a apresentação da <br />
               Emagrecentro, finalize seu cadastro abaixo:
             </TitleSimple>
-            <FormularioContinue />
+            <FormWrapper>
+              <FormularioContinue />
+              <ContentPersonagem>
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcSet="/static/img/faixa5/personagem.webp"
+                  />
+                  <Personagem
+                    src="/static/img/faixa5/personagem.png"
+                    alt="Emagrecentro"
+                  />
+                </picture>
+              </ContentPersonagem>
+            </FormWrapper>
           </FaixaSucessoTexto>
         </FaixaConteudo>
       </Container>

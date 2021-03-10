@@ -31,13 +31,18 @@ const FormContinue = styled(Form)`
   width: 400px;
   box-shadow: none;
   background-color: #fff;
+  box-shadow: ${props => props.theme.boxShadows.stronger};
 
-  padding: 4rem 3rem 4rem;
+  padding: 4rem 3rem 2rem;
   margin-bottom: -8rem;
 
   position: relative;
-  z-index: 100;
-  @media (max-width: 600px) {
+  z-index: 10;
+  @media (max-width: 900px) {
+    justify-content: center;
+  }
+  @media (max-width: 400px) {
+    max-width: 100%;
     width: 100%;
   }
 `;
@@ -59,6 +64,10 @@ const LogoContinue = styled(Logo)`
 
 const ContinueInputsMenor = styled(FormInputsMenor)`
   margin-top: 0;
+`;
+
+const FormFooterContinue = styled(FormFooter)`
+  margin-bottom: 1rem;
 `;
 
 const FormButtonContinue = styled(FormButton)`
@@ -226,7 +235,7 @@ export default function FormularioContinue() {
               className="text-area text-area--cinza"
             />
           </ContinueInputsMenor>
-          <FormFooter>
+          <FormFooterContinue>
             <FormButtonContinue
               type="submit"
               backColor="azul"
@@ -235,7 +244,7 @@ export default function FormularioContinue() {
             >
               CONCLUIR CADASTRO!
             </FormButtonContinue>
-          </FormFooter>
+          </FormFooterContinue>
           <FormSeguranca>
             <i className="fas fa-lock icon" />
             <span className="textSeguranca">
