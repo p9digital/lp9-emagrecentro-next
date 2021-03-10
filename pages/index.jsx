@@ -129,15 +129,15 @@ const Home = () => {
       <MascaraCallForm ativo={destaqueForm} />
       <Head>
         <title>
-          Fature vulcanizando pneus | PLC MÁQUINAS Silvio Pelicer
+          Franquia Emagrecentro | Fature, em média, R$ 1 milhão por ano!
         </title>
         <meta
           name="description"
-          content="Fature mais de 10 mil por mês com as máquinas vulcanizadoras PLC. Conserte pneus agrícolas, de carga e OTR. Compare os custos. Orçamento via WhatsApp."
+          content="Seja franqueado(a) Emagrecentro, 1ª franquia de estética e emagrecimento do Brasil! Payback de 6 a 12 meses. Lucratividade de 20%.  Baixe a apresentação. "
         />
         <meta
           name="keywords"
-          content="plc maquinas vulcanizadoras, silvio pelicer, pneus agricolas, pneus de carga, pneus otr, conserto de pneus caminhao, pneus trator, vulcanizar pneu preço, vulcanizaçao de pneus, custo conserto pneu, maquina de vulcanizar pneus, pneus para maquinas, pneu vulcanizado,  maquina p1 vulcanizar pneu, descolador de pneu agricola, descolar de pneu caminhao"
+          content="emagrecentro, emagrecentro franquia valor, emagrecentro faturamento, franquia emagrecentro lucro, emagrecentro franqueado, franquia emagrecimento, franquia estetica, franquia de clínicas de emagrecimento, franquia de estetica ABF, franquia emagrecimento retorno"
         />
         <meta name="robots" content="index, follow" />
         <meta name="rating" content="general" />
@@ -145,17 +145,17 @@ const Home = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://lp9plcmaquinas.netlify.app/static/img/og.jpg"
+          content="https://franquiaemagrecimento.com.br/static/img/og.png"
         />
         <meta
           property="og:title"
-          content="Fature vulcanizando pneus | PLC MÁQUINAS Silvio Pelicer"
+          content="Franquia Emagrecentro | Fature, em média, R$ 1 milhão por ano!"
         />
         <meta
           property="og:description"
-          content="Fature mais de 10 mil por mês com as máquinas vulcanizadoras PLC. Conserte pneus agrícolas, de carga e OTR. Compare os custos. Orçamento via WhatsApp."
+          content="Seja franqueado(a) Emagrecentro, 1ª franquia de estética e emagrecimento do Brasil! Payback de 6 a 12 meses. Lucratividade de 20%.  Baixe a apresentação. "
         />
-        <meta property="og:url" content="https://lp9plcmaquinas.netlify.app/" />
+        <meta property="og:url" content="https://franquiaemagrecimento.com.br/" />
       </Head>
       <PaginaInterna>
         <Faixa1 />
