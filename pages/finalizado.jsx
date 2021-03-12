@@ -215,26 +215,26 @@ const TextoWrapperFinalizado = styled(Faixa1Texto)`
 const Finalizado = () => {
   const router = useRouter();
 
-    useEffect(() => {
-      async function buscaSession() {
-        const session = await JSON.parse(
-          localStorage.getItem("@emagrecentro/session-lead")
-        );
+  // useEffect(() => {
+  //   async function buscaSession() {
+  //     const session = await JSON.parse(
+  //       localStorage.getItem("@emagrecentro/session-lead")
+  //     );
 
-        if (!session) {
-          router.push("/");
-          return false;
-        }
+  //     if (!session) {
+  //       router.push("/");
+  //       return false;
+  //     }
 
-        if (!session.lead_sucesso) {
-          router.push("/sucesso");
-          return false;
-        }
+  //     if (!session.lead_sucesso) {
+  //       router.push("/sucesso");
+  //       return false;
+  //     }
 
-        localStorage.removeItem("@emagrecentro/session-lead");
-      }
-      buscaSession();
-    }, ["umavez"]);
+  //     localStorage.removeItem("@emagrecentro/session-lead");
+  //   }
+  //   buscaSession();
+  // }, ["umavez"]);
 
   return (
     <div>
@@ -270,7 +270,10 @@ const Finalizado = () => {
           property="og:url"
           content="https://franquiaemagrecimento.com.br/"
         />
-        <meta property="og:url" content="http://franquiaemagrecimento.com.br/" />
+        <meta
+          property="og:url"
+          content="http://franquiaemagrecimento.com.br/"
+        />
       </Head>
       <Faixa1Wrapper>
         <ContentContainerFinalizado>
@@ -295,15 +298,17 @@ const Finalizado = () => {
               <Text>
                 Aguarde a ligação de um de nossos consulstores, o DDD é 11!
               </Text>
-              <ButtonWrapperFinalizado>
-                <ButtonPulse
-                  backColor="verdeClaro"
-                  fontColor="azul"
-                  backPulse="verdeClaro"
-                >
-                  BAIXE NOSSA APRESENTAÇÃO!
-                </ButtonPulse>
-              </ButtonWrapperFinalizado>
+              <a href="https://leadsp9-public-resources.s3-sa-east-1.amazonaws.com/arquivos-apresentacao/Apresenta%C3%A7%C3%A3o+Emagrecentro.pdf" target="_blank">
+                <ButtonWrapperFinalizado>
+                  <ButtonPulse
+                    backColor="verdeClaro"
+                    fontColor="azul"
+                    backPulse="verdeClaro"
+                  >
+                    BAIXE NOSSA APRESENTAÇÃO!
+                  </ButtonPulse>
+                </ButtonWrapperFinalizado>
+              </a>
             </Faixa1Texto>
           </FaixaConteudoResponsive>
         </ContentContainerFinalizado>
@@ -391,10 +396,16 @@ const Finalizado = () => {
 
       <RedesWrapper>
         <TextoWrapperFinalizado>
-          <a href="# " target="_blank">
+          <a
+            href="https://www.facebook.com/EmagrecentroOficial"
+            target="_blank"
+          >
             <Icon tamanho="3rem" icon="facebook2" cor="#fff" tipo="svg" />
           </a>
-          <a href="# " target="_blank">
+          <a
+            href="https://www.instagram.com/emagrecentro_oficial/"
+            target="_blank"
+          >
             <Icon tamanho="3rem" icon="instagram2" cor="#fff" tipo="svg" />
           </a>
         </TextoWrapperFinalizado>
