@@ -215,26 +215,26 @@ const TextoWrapperFinalizado = styled(Faixa1Texto)`
 const Finalizado = () => {
   const router = useRouter();
 
-  // useEffect(() => {
-  //   async function buscaSession() {
-  //     const session = await JSON.parse(
-  //       localStorage.getItem("@emagrecentro/session-lead")
-  //     );
+  useEffect(() => {
+    async function buscaSession() {
+      const session = await JSON.parse(
+        localStorage.getItem("@emagrecentro/session-lead")
+      );
 
-  //     if (!session) {
-  //       router.push("/");
-  //       return false;
-  //     }
+      if (!session) {
+        router.push("/");
+        return false;
+      }
 
-  //     if (!session.lead_sucesso) {
-  //       router.push("/sucesso");
-  //       return false;
-  //     }
+      if (!session.lead_sucesso) {
+        router.push("/sucesso");
+        return false;
+      }
 
-  //     localStorage.removeItem("@emagrecentro/session-lead");
-  //   }
-  //   buscaSession();
-  // }, ["umavez"]);
+      localStorage.removeItem("@emagrecentro/session-lead");
+    }
+    buscaSession();
+  }, ["umavez"]);
 
   return (
     <div>
