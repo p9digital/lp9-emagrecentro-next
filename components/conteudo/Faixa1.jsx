@@ -166,6 +166,10 @@ export const TitleSimple = styled.p`
 
 const TitleLink = styled.span`
   text-decoration: underline;
+
+  &:hover{
+    cursor: pointer;
+  }
 `;
 
 export const IconWrapper = styled.div`
@@ -178,6 +182,35 @@ export const IconZap = styled(Icon)`
 
   @media (max-width: 500px) {
     margin-right: 1rem;
+  }
+`;
+
+const ContentPersonagemForm = styled.div`
+  display: none;
+  width: 40%;
+  @media (max-width: 900px) {
+    display: initial;
+  }
+  @media (max-width: 500px) {
+    display: none;
+  }
+`;
+const PersonagemForm = styled.img`
+  width: 250px;
+  margin-bottom: -160px;
+`;
+
+const ContentWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const TextoWrapper = styled.div`
+  @media(max-width: 900px){
+    width: 60%;
+  }
+  @media (max-width: 500px) {
+    width: 100%;
   }
 `;
 
@@ -199,17 +232,33 @@ const Faixa1 = ({ callForm }) => {
             <Title>
               Invista a partir de R$ 100 mil na sua franquia de emagrecimento
             </Title>
-            <TitleVerdeFaixa1>
-              e fature, em média, R$ 1 milhão por ano!
-            </TitleVerdeFaixa1>
-            <TitleSimple>
-              Seja franqueado (a) Emagrecentro,{" "}
-              <strong>
-                a maior franquia de emagrecimento e estética das Américas
-              </strong>
-              , que cresceu 20% em 2020!{" "}
-              <TitleLink>Baixe a apresentação</TitleLink>
-            </TitleSimple>
+            <TitleVerde>e fature, em média, R$ 1 milhão/ano!</TitleVerde>
+            <ContentWrapper>
+              <TextoWrapper>
+                <TitleSimple>
+                  Seja franqueado (a) Emagrecentro,{" "}
+                  <strong>
+                    a maior franquia de emagrecimento e estética das Américas
+                  </strong>
+                  , que cresceu 20% em 2020!{" "}
+                  <TitleLink onClick={() => callForm()}>
+                    Baixe a apresentação
+                  </TitleLink>
+                </TitleSimple>
+              </TextoWrapper>
+              <ContentPersonagemForm>
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcSet="/static/img/faixa1/personagem-form.webp"
+                  />
+                  <PersonagemForm
+                    src="/static/img/faixa1/personagem-form.png"
+                    alt="Emagrecentro"
+                  />
+                </picture>
+              </ContentPersonagemForm>
+            </ContentWrapper>
           </Faixa1Texto>
         </FaixaConteudoResponsive>
       </ContentContainer>

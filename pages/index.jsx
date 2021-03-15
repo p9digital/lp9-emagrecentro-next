@@ -43,6 +43,9 @@ const FormWrapperHorizontal = styled.div`
   margin-top: -45rem;
 
   @media (max-width: 900px) {
+     margin-top: -5rem;
+  }
+  @media (max-width: 500px) {
      margin-top: -15rem;
   }
 `;
@@ -50,6 +53,12 @@ const FormWrapperHorizontal = styled.div`
 const ContentPersonagemForm = styled.div`
   @media (max-width: 1075px){
     margin-left: 9rem;
+  }
+  @media(max-width: 900px){
+    display: none;
+  }
+  @media(max-width: 500px){
+    display: initial;
   }
 `;
 const PersonagemForm = styled.img`
