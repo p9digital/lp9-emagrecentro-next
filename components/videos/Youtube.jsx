@@ -32,7 +32,6 @@ const Youtube = ({ youtubeId }) => {
         className="vimeo-player"
         allowFullScreen
         responsive
-        autoplay
       />
     </VideoWrapper>
   );
