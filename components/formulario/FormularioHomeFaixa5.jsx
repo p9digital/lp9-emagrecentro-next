@@ -112,6 +112,7 @@ export default function FormularioHomeFaixa5() {
           nome: lead.nome,
           celular: lead.celular,
           email: lead.email,
+          capital: lead.capital,
           uf: lead.estado,
           cidade: lead.cidade,
           referrer: document.referrer,
