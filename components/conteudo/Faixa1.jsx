@@ -240,7 +240,7 @@ const Faixa1 = ({ callForm }) => {
                   <strong>
                     a maior franquia de emagrecimento e estética das Américas
                   </strong>
-                  , que cresceu 20% em 2020!{" "}
+                  , que teve um crescimento de 20% no faturamento dos franqueados em 2020!{" "}
                   <TitleLink onClick={() => callForm()}>
                     Baixe a apresentação
                   </TitleLink>

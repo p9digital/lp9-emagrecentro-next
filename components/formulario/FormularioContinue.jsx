@@ -92,7 +92,7 @@ export default function FormularioContinue() {
   const [lead, setLead] = useState({
     whatsapp: "",
     profissao: "",
-    porque: ""
+    pretende: ""
   });
   const [controleForm, setControleForm] = useState({
     carregando: "dias",
@@ -139,7 +139,7 @@ export default function FormularioContinue() {
           campaign_id: process.env.CAMPAIGN_ID,
           whatsapp: lead.whatsapp,
           profissao: lead.profissao,
-          porque: lead.porque
+          pretende: lead.pretende
         })
       });
 
@@ -228,10 +228,10 @@ export default function FormularioContinue() {
               className="select-input--cinza"
             />
             <TextArea
-              nome="porque"
-              placeholder="Tem alguma experiência no setor de franquias e/ou estética?"
+              nome="pretende"
+              placeholder="Pretende iniciar sua franquia imediatamente, em até 6 meses ou mais de 1 ano"
               handleInput={handleInput}
-              valor={lead.porque}
+              valor={lead.pretende}
               valido={controleForm.valido}
               className="text-area text-area--cinza"
             />

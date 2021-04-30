@@ -26,7 +26,7 @@ export const FaixaConteudo = styled.div`
   }
 `;
 
- const ContentTitles = styled.div`
+const ContentTitles = styled.div`
   max-width: 45rem;
   padding-right: 3rem;
 
@@ -108,9 +108,10 @@ const Faixa6 = ({ callForm }) => (
             <TitleStrongFaixa6> cresceu mais de 500%!</TitleStrongFaixa6>
           </TitleFaixa6>
           <TextSimple>
-            100% dos franqueados responderam que tiveram o retorno no prazo
-            esperado. Isso porque o mercado de estética e emagrecimento cresceu
-            567% no Brasil nos últimos cinco anos.
+            Segundo pesquisa realizada pela ABF, 100% dos franqueados do
+            Emagrecentro tiveram retorno do investimento no prazo esperado! Isso
+            porque o mercado de estética e emagrecimento cresceu 567% no Brasil
+            nos últimos cinco anos.
           </TextSimple>
         </ContentTitles>
         <ContentInfos>

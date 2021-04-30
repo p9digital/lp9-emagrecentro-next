@@ -43,7 +43,7 @@ export const validaTelefone = telefone => {
 };
 
 export const validacaoContinue = dados => {
-  if (!dados.whatsapp || !dados.profissao || !dados.porque) {
+  if (!dados.whatsapp || !dados.profissao || !dados.pretende) {
     return false;
   }
 

@@ -139,7 +139,7 @@ const Footer = ({callForm}) => (
           </p>
           <p>
             <strong>Endereço: </strong>
-            Rua Apotribu, 139, Conj 71, Parque Imperial, São Paulo (SP), CEP: 04.302-000
+            Bento de Farias, 163 - Bosque da Saúde, São Paulo (SP), CEP: 04151-020
           </p>
           <p>
             <strong>E-mail: </strong>

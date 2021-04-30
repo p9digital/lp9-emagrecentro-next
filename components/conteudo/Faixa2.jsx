@@ -129,7 +129,7 @@ const Faixa2 = ({ callForm }) => (
         </ContentColumnItems>
         <ContentColumnItems>
           <TextSimpleFaixa2>
-            Margem de lucro de 50% 
+            Lucratividade de 50% 
           </TextSimpleFaixa2>
           <TextSimpleFaixa2>
             Única franquia do segmento com 10 prêmios de excelência ABF.
@@ -139,9 +139,6 @@ const Faixa2 = ({ callForm }) => (
           </TextSimpleFaixa2>
         </ContentColumnItems>
         <ContentColumnItems>
-          <TextSimpleFaixa2>
-            Lucratividade de 20% 
-          </TextSimpleFaixa2>
           <TextSimpleFaixa2>
             Metodologia exclusiva de emagrecimento científico
           </TextSimpleFaixa2>

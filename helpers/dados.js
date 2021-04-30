@@ -32,7 +32,7 @@ export const estados = [
 export const capitais = [
   "Tenho R$ 100 mil para investir",
   "Tenho R$ 200 mil para investir",
-  "Não tenho, mas quero saber sobre a franquia"
+  "Tenho até R$ 50 mil para investir"
 ];
 
 //Faixa4
@@ -42,11 +42,11 @@ export const Icones = [
     icon: "icon1",
     text: "Menor taxa de franquia do mercado de clínicas de emagrecimento!"
   },
-  {
-    id: 2,
-    icon: "icon2",
-    text: "Valor fixo de Royalties (sem variação)"
-  },
+  // {
+  //   id: 2,
+  //   icon: "icon2",
+  //   text: "Valor fixo de Royalties (sem variação)"
+  // },
   {
     id: 3,
     icon: "icon3",
@@ -61,10 +61,10 @@ export const Icones = [
     id: 5,
     icon: "icon5",
     text:
-      "tdimentos são realizados por Esteticistas, Biomédicos e por Fisioterapeutas."
+      "metodologia exclusiva patenteada no Brasil e EUA, e apoio ao franqueado por meio da Telemedicina."
   },
   {
-    id: 6,
+    id: 2,
     icon: "icon6",
     text: "Treinamento e apoio em todas as fases de implantação"
   }
@@ -79,11 +79,18 @@ export const depoimentos = [
       "Conseguimos recuperar o investimento em pouco tempo e inauguramos uma segunda unidade.",
     text2: "Sanauá - Franqueada Serraria e Jatiúca, Maceió-AL"
   },
+  // {
+  //   id: 2,
+  //   icon: "depoimento2",
+  //   text: "Emagrecentro, investimento certo na contra mão da crise.",
+  //   text2: "Anderson - Franqueado Mauá-SP e Santo André-SP"
+  // },
   {
     id: 2,
     icon: "depoimento2",
-    text: "Emagrecentro, investimento certo na contra mão da crise.",
-    text2: "Anderson - Franqueado Mauá-SP e Santo André-SP"
+    text:
+      "Pude realizar o meu sonho e sou imensamente grata por trabalhar com o que eu amo",
+    text2: "Fabiana - Franqueada Vila Maria-SP e Natal-RN"
   },
   {
     id: 3,
