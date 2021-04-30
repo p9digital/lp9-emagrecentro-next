@@ -229,7 +229,7 @@ export default function FormularioContinue() {
             />
             <TextArea
               nome="pretende"
-              placeholder="Pretende iniciar sua franquia imediatamente, em até 6 meses ou mais de 1 ano"
+              placeholder="Pretende iniciar sua franquia imediatamente, em até 6 meses ou mais de 1 ano?"
               handleInput={handleInput}
               valor={lead.pretende}
               valido={controleForm.valido}
