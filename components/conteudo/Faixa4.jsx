@@ -27,7 +27,7 @@ const TitleBlue = styled(Title)`
 
 const ContentIcons = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
   flex-wrap:wrap;
   max-width: 700px;
@@ -46,7 +46,7 @@ const ContentIconText = styled.div`
   align-items: center;
   flex-direction: column;
   width: 200px;
-  margin-bottom: 1.5rem;
+  margin: 1.5rem;
 
   @media(max-width: 440px){
      width: 100%;
