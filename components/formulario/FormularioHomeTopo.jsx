@@ -22,7 +22,7 @@ import {
   FormSeguranca
 } from "../ui/formulario/FormStylesHorizontal";
 
-import { capitais, estados} from "../../helpers/dados";
+import { capitais, estados } from "../../helpers/dados";
 
 import {
   validacao,
@@ -45,7 +45,7 @@ export default function FormularioHomeTopo() {
     email: "",
     estado: "",
     cidade: "",
-    capital: "",
+    capital: ""
   });
 
   const [cidades, setCidades] = useState([]);
@@ -82,6 +82,29 @@ export default function FormularioHomeTopo() {
       ...controleForm,
       enviando: true
     });
+
+    const formData = new FormData();
+    formData.append("nome", lead.nome);
+    formData.append("email", lead.email);
+    formData.append("telefone", lead.celular);
+    formData.append("uf", lead.estado);
+    formData.append("cidade", lead.cidade);
+    formData.append("capital", lead.capital);
+    formData.append("url_conversao", window.location.href);
+
+    console.log(formData);
+
+    const responseIntegracao = await fetch(
+      "http://app.salepower.com.br/api/addlead/emagrecentro/123/316c0f7e087daf8524339c6061cf16cf/719/9a6006e6fc5739b20e56755fb89fd686/160/9d760469c02c178bb40aafe81eb1757a",
+      {
+        method: "POST",
+        body: formData
+      }
+    );
+
+    const dataIntegracao = await responseIntegracao.json();
+
+    console.log(dataIntegracao);
 
     const queryParams = queryString.parse(window.location.search);
 
@@ -181,20 +204,21 @@ export default function FormularioHomeTopo() {
             <FormHeaderHorizontal>
               <p>Baixe nossa apresentação!</p>
               <span>
-                Preencha o formulário abaixo e receba nossa apresentação completa.
+                Preencha o formulário abaixo e receba nossa apresentação
+                completa.
               </span>
             </FormHeaderHorizontal>
             <FormInputsMenor>
               <FormRowHorizontal>
-              <Input
-                nome="nome"
-                placeholder="Nome Completo"
-                handleInput={handleInput}
-                valor={lead.nome}
-                valido={controleForm.valido}
-                className="select-input--cinza"
-                tipo="text"
-                custom={lead.nome ? validaNomeCompleto(lead.nome) : true}
+                <Input
+                  nome="nome"
+                  placeholder="Nome Completo"
+                  handleInput={handleInput}
+                  valor={lead.nome}
+                  valido={controleForm.valido}
+                  className="select-input--cinza"
+                  tipo="text"
+                  custom={lead.nome ? validaNomeCompleto(lead.nome) : true}
                 />
               </FormRowHorizontal>
               <FormRowHorizontal2Campos>
@@ -217,7 +241,7 @@ export default function FormularioHomeTopo() {
                   custom={lead.celular ? validaTelefone(lead.celular) : true}
                   className="select-input--cinza"
                   tipo="tel"
-                  />
+                />
               </FormRowHorizontal2Campos>
               <FormRowHorizontalCidade>
                 <Select
@@ -239,32 +263,28 @@ export default function FormularioHomeTopo() {
                   className="select-input--cinza select-input--medium"
                 />
               </FormRowHorizontalCidade>
-            <Select
-              nome="capital"
-              placeholder="Capital disponível para investimento?"
-              handleInput={handleInput}
-              valor={lead.capital}
-              valores={capitais}
-              valido={controleForm.valido}
-              className="select-input--cinza"
-            />
+              <Select
+                nome="capital"
+                placeholder="Capital disponível para investimento?"
+                handleInput={handleInput}
+                valor={lead.capital}
+                valores={capitais}
+                valido={controleForm.valido}
+                className="select-input--cinza"
+              />
             </FormInputsMenor>
-            </FormConteudo>
+          </FormConteudo>
           <FormFooter>
-              <FormButton
-                type="submit"
-                backColor="verdeClaro"
-                fontColor="branco"
-              >
+            <FormButton type="submit" backColor="verdeClaro" fontColor="branco">
               BAIXAR APRESENTAÇÃO!
-              </FormButton>
-              <FormSeguranca>
-                <i className="fas fa-lock icon" />
-                <span className="textSeguranca">
-                  Seus dados estão protegidos conosco.
-                </span>
-              </FormSeguranca>
-            </FormFooter>
+            </FormButton>
+            <FormSeguranca>
+              <i className="fas fa-lock icon" />
+              <span className="textSeguranca">
+                Seus dados estão protegidos conosco.
+              </span>
+            </FormSeguranca>
+          </FormFooter>
         </FormTopo>
       )}
     </>

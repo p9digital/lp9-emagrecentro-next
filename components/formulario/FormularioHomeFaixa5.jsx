@@ -98,6 +98,29 @@ export default function FormularioHomeFaixa5() {
       enviando: true
     });
 
+    const formData = new FormData();
+    formData.append("nome", lead.nome);
+    formData.append("email", lead.email);
+    formData.append("telefone", lead.celular);
+    formData.append("uf", lead.estado);
+    formData.append("cidade", lead.cidade);
+    formData.append("capital", lead.capital);
+    formData.append("url_conversao", window.location.href);
+
+    console.log(formData);
+
+    const responseIntegracao = await fetch(
+      "http://app.salepower.com.br/api/addlead/emagrecentro/123/316c0f7e087daf8524339c6061cf16cf/719/9a6006e6fc5739b20e56755fb89fd686/160/9d760469c02c178bb40aafe81eb1757a",
+      {
+        method: "POST",
+        body: formData
+      }
+    );
+
+    const dataIntegracao = await responseIntegracao.json();
+
+    console.log(dataIntegracao);
+
     const queryParams = queryString.parse(window.location.search);
 
     try {
