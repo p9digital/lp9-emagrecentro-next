@@ -95,7 +95,7 @@ export default function FormularioHomeTopo() {
     console.log(formData);
 
     const responseIntegracao = await fetch(
-      "http://app.salepower.com.br/api/addlead/emagrecentro/123/316c0f7e087daf8524339c6061cf16cf/719/9a6006e6fc5739b20e56755fb89fd686/160/9d760469c02c178bb40aafe81eb1757a",
+      "https://app.salepower.com.br/api/addlead/emagrecentro/123/316c0f7e087daf8524339c6061cf16cf/719/9a6006e6fc5739b20e56755fb89fd686/160/9d760469c02c178bb40aafe81eb1757a",
       {
         method: "POST",
         body: formData
