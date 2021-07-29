@@ -33,12 +33,18 @@ export const validaNomeCompleto = nome => {
 };
 
 export const validaTelefone = telefone => {
-  const valido = /^(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/.test(
+  // const valido = /^(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/.test(
+  //   telefone
+  // );
+
+  const valido = /^(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{4})\-?(\d{4}))$/.test(
     telefone
   );
+  
   const valido2 = /^(?:\(?([1-9][0-9])\)?\s?)?(?:((?:[9]?[9][9][9][9]))\-?([9][9][9][9]))$/.test(
     telefone
   );
+
   return valido && !valido2;
 };
 
