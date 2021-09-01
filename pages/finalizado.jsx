@@ -339,7 +339,7 @@ const Finalizado = () => {
                 apresentação Emagrecentro.
               </TitleSimple>
               <Text>
-                Aguarde a ligação de um de nossos consulstores, o DDD é 11!
+                Aguarde a ligação de um de nossos consultores, o DDD é 11!
               </Text>
               <a
                 href="https://leadsp9-public-resources.s3-sa-east-1.amazonaws.com/arquivos-apresentacao/Apresenta%C3%A7%C3%A3o+Emagrecentro.pdf"
